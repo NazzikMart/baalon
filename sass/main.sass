@@ -1,11 +1,8 @@
+@import '../sass/abstract/_variables'
+@import '../sass/abstract/_mixins'
 
-$color_gray : gray
-$color_brown : #ba8584
-$color_dark: #414FB3 
-$color_black : black
-
-@mixin style-link($color)
-    color: $color
+@import '../sass/base/_animations'
+@import '../sass/base/_float'
        
     
 *
@@ -24,7 +21,7 @@ body
     background-color: white
 
 .container
-    // background-color: lightgray
+    background-color: #fbfbfb
 
 // header 
 .header
@@ -113,8 +110,24 @@ body
         transform: scale(1.4)
         opacity: 0
         
-
-
+.section-about
+    padding-top: 8rem
+.title-secondary
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient((90deg ,186, 153 , 64, 0.7) 0.03% , #de9d23)
+    color: $color_blue
+    // text-align: center
+    transition: all .2s ease
+    backface-visibility: hidden
+    &:hover
+        transform: skewY(2deg) skewX(5deg) scale(1.1)
+        cursor: pointer
+        text-shadow: #38bee0 1px 0 10px;
+.text-center
+    text-align: center
 // animation 
 @keyframes opacity-title
     0%
@@ -142,3 +155,5 @@ body
         opacity: 1
         transform: translateY(0px)   
 
+@function summ($num1 , $num2)
+    @return num1 + num2
